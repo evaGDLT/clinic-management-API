@@ -12,40 +12,40 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PatientsService = void 0;
+exports.ProfessionalsService = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-let PatientsService = class PatientsService {
-    constructor(patientModel) {
-        this.patientModel = patientModel;
+let ProfessionalsService = class ProfessionalsService {
+    constructor(professionalModel) {
+        this.professionalModel = professionalModel;
     }
-    async getPatients() {
-        const patients = await this.patientModel.find();
-        return patients;
+    async getProfessionals() {
+        const professionals = await this.professionalModel.find();
+        return professionals;
     }
-    async createPatient(createDto) {
-        const patient = new this.patientModel(createDto);
-        await patient.save();
-        return patient;
+    async createProfessional(createDto) {
+        const professional = new this.professionalModel(createDto);
+        await professional.save();
+        return professional;
     }
-    async getPatient(id) {
-        const patient = await this.patientModel.findById(id);
-        return patient;
+    async getProfessional(id) {
+        const professional = await this.professionalModel.findById(id);
+        return professional;
     }
-    async deletePatient(id) {
-        const deletedPatient = await this.patientModel.findByIdAndDelete(id);
-        return deletedPatient;
+    async deleteProfessional(id) {
+        const deletedProfessional = await this.professionalModel.findByIdAndDelete(id);
+        return deletedProfessional;
     }
-    async updateUser(id, createPatientDto) {
-        const updatedPatient = await this.patientModel.findByIdAndUpdate({ _id: id }, createPatientDto, { new: true });
-        return updatedPatient;
+    async updateUser(id, createDto) {
+        const updatedProfessional = await this.professionalModel.findByIdAndUpdate({ _id: id }, createDto, { new: true });
+        return updatedProfessional;
     }
 };
-PatientsService = __decorate([
+ProfessionalsService = __decorate([
     common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel("patients")),
+    __param(0, mongoose_1.InjectModel("professionals")),
     __metadata("design:paramtypes", [mongoose_2.Model])
-], PatientsService);
-exports.PatientsService = PatientsService;
-//# sourceMappingURL=patients.service.js.map
+], ProfessionalsService);
+exports.ProfessionalsService = ProfessionalsService;
+//# sourceMappingURL=professionals.service.js.map

@@ -20,18 +20,18 @@ let PatientController = class PatientController {
     constructor(patientsService) {
         this.patientsService = patientsService;
     }
-    async getUsers(res) {
+    async getPatients(res) {
         const patients = await this.patientsService.getPatients();
         return res.status(common_1.HttpStatus.OK).json(patients);
     }
-    async createUser(res, createPatientDto) {
+    async createPatient(res, createPatientDto) {
         const patient = await this.patientsService.createPatient(createPatientDto);
         return res.status(common_1.HttpStatus.OK).json({
             message: 'Patient Created',
             patient
         });
     }
-    async getUser(res, id) {
+    async getPatient(res, id) {
         if (id.match(/^[0-9a-fA-F]{24}$/)) {
             const patient = await this.patientsService.getPatient(id);
             if (!patient)
@@ -42,7 +42,7 @@ let PatientController = class PatientController {
             throw new common_1.NotFoundException("Patient not found");
         }
     }
-    async deleteUser(res, id) {
+    async deletePatient(res, id) {
         if (id.match(/^[0-9a-fA-F]{24}$/)) {
             const patient = await this.patientsService.deletePatient(id);
             if (!patient)
@@ -55,7 +55,7 @@ let PatientController = class PatientController {
             throw new common_1.NotFoundException("Patient not found");
         }
     }
-    async updateUser(res, createPatientDto, id) {
+    async updatePatient(res, createPatientDto, id) {
         const patient = await this.patientsService.updateUser(id, createPatientDto);
         if (id.match(/^[0-9a-fA-F]{24}$/)) {
             if (!patient)
@@ -74,28 +74,28 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
-], PatientController.prototype, "getUsers", null);
+], PatientController.prototype, "getPatients", null);
 __decorate([
     common_1.Post(),
     __param(0, common_1.Res()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, createPatient_dto_1.CreatePatientDto]),
     __metadata("design:returntype", Promise)
-], PatientController.prototype, "createUser", null);
+], PatientController.prototype, "createPatient", null);
 __decorate([
     common_1.Get('/:id'),
     __param(0, common_1.Res()), __param(1, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, String]),
     __metadata("design:returntype", Promise)
-], PatientController.prototype, "getUser", null);
+], PatientController.prototype, "getPatient", null);
 __decorate([
     common_1.Delete('/:id'),
     __param(0, common_1.Res()), __param(1, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, String]),
     __metadata("design:returntype", Promise)
-], PatientController.prototype, "deleteUser", null);
+], PatientController.prototype, "deletePatient", null);
 __decorate([
     common_1.Put('/:id'),
     __param(0, common_1.Res()),
@@ -104,9 +104,9 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, createPatient_dto_1.CreatePatientDto, Object]),
     __metadata("design:returntype", Promise)
-], PatientController.prototype, "updateUser", null);
+], PatientController.prototype, "updatePatient", null);
 PatientController = __decorate([
-    common_1.Controller('users'),
+    common_1.Controller('patients'),
     __metadata("design:paramtypes", [patients_service_1.PatientsService])
 ], PatientController);
 exports.PatientController = PatientController;

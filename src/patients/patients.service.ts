@@ -3,17 +3,14 @@ import { Patient } from './interfaces/patient.model';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CreatePatientDto } from './DTO/createPatient.dto';
-import { UpdatePatientDto } from './DTO/updatePatient.dto';
-
 
 @Injectable()
 export class PatientsService {
     constructor(@InjectModel("patients") private patientModel: Model<Patient>){}
    
     async getPatients(): Promise<Patient[]>{
-        const users = await this.patientModel.find()
-        Logger.log(users);
-        return users;
+        const patients = await this.patientModel.find()
+        return patients;
     }
 
      async  createPatient(createDto: CreatePatientDto): Promise<Patient> {

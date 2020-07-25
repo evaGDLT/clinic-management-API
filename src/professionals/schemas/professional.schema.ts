@@ -1,15 +1,16 @@
 import * as mongoose from 'mongoose';
 
-export const patientSchema =new mongoose.Schema({
+export const professionalSchema =new mongoose.Schema({
     type: String,
     personalData: {
-        NHC: {type: String, required:true},
+        medicalBoardNumber: {type: String, required:true},
         firstName: {type: String, required:true},
         lastName: {type: String, required:true},
         secondLastName: String,
         gender: String,
         birthdate: String,
         NIF: String,
+        professionalType: mongoose.Schema.Types.Mixed
     },
     address: {
         street: String,
@@ -18,7 +19,6 @@ export const patientSchema =new mongoose.Schema({
         postalCode: String,
         city: String
     },
-    issurances:  [], 
     createdAt: {
         type:Date,
         default: Date.now

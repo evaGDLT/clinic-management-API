@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
+const professionals_module_1 = require("./professionals/professionals.module");
 const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
@@ -17,10 +18,12 @@ let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [config_1.ConfigModule.forRoot({
+        imports: [
+            professionals_module_1.ProfessionalsModule, patients_module_1.PatientsModule, config_1.ConfigModule.forRoot({
                 envFilePath: '.env',
             }), patients_module_1.PatientsModule,
-            mongoose_1.MongooseModule.forRoot(`mongodb+srv://Eva:eva91@cluster0.vm8qj.mongodb.net/users?retryWrites=true&w=majority`)],
+            mongoose_1.MongooseModule.forRoot(`mongodb+srv://Eva:eva91@cluster0.vm8qj.mongodb.net/users?retryWrites=true&w=majority`)
+        ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })

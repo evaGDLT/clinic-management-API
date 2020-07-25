@@ -1,17 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.patientSchema = void 0;
+exports.professionalSchema = void 0;
 const mongoose = require("mongoose");
-exports.patientSchema = new mongoose.Schema({
+exports.professionalSchema = new mongoose.Schema({
     type: String,
     personalData: {
-        NHC: { type: String, required: true },
+        medicalBoardNumber: { type: String, required: true },
         firstName: { type: String, required: true },
         lastName: { type: String, required: true },
         secondLastName: String,
         gender: String,
         birthdate: String,
         NIF: String,
+        professionalType: mongoose.Schema.Types.Mixed
     },
     address: {
         street: String,
@@ -20,10 +21,9 @@ exports.patientSchema = new mongoose.Schema({
         postalCode: String,
         city: String
     },
-    issurances: [],
     createdAt: {
         type: Date,
         default: Date.now
     }
 });
-//# sourceMappingURL=patient.schema.js.map
+//# sourceMappingURL=professional.schema.js.map

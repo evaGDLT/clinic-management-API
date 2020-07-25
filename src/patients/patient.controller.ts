@@ -3,18 +3,18 @@ import { PatientsService } from './patients.service';
 import { Patient } from './interfaces/patient.model';
 import { CreatePatientDto } from './DTO/createPatient.dto';
 
-@Controller('users')
+@Controller('patients')
 export class PatientController {
     constructor(private patientsService: PatientsService) { }
 
     @Get()
-    async getUsers(@Res() res): Promise<Patient[]> {
+    async getPatients(@Res() res): Promise<Patient[]> {
         const patients = await this.patientsService.getPatients();
         return res.status(HttpStatus.OK).json(patients);
     }
 
     @Post()
-    async createUser(@Res() res, @Body() createPatientDto: CreatePatientDto): Promise<Patient> {
+    async createPatient(@Res() res, @Body() createPatientDto: CreatePatientDto): Promise<Patient> {
         const patient = await this.patientsService.createPatient(createPatientDto);
         return res.status(HttpStatus.OK).json({
             message: 'Patient Created',
@@ -23,7 +23,7 @@ export class PatientController {
     }
 
     @Get('/:id')
-    async getUser(@Res() res, @Param('id') id: string): Promise<Patient> {
+    async getPatient(@Res() res, @Param('id') id: string): Promise<Patient> {
         if (id.match(/^[0-9a-fA-F]{24}$/)) {
             const patient = await this.patientsService.getPatient(id);
             if (!patient) throw new NotFoundException("Patient not found");
@@ -35,7 +35,7 @@ export class PatientController {
     }
 
     @Delete('/:id')
-    async deleteUser(@Res() res, @Param('id') id: string): Promise<Patient> {
+    async deletePatient(@Res() res, @Param('id') id: string): Promise<Patient> {
         if (id.match(/^[0-9a-fA-F]{24}$/)) {
             const patient = await this.patientsService.deletePatient(id);
             if (!patient) throw new NotFoundException("Patient not found");
@@ -48,7 +48,7 @@ export class PatientController {
         }
     }
     @Put('/:id')
-    async updateUser(
+    async updatePatient(
         @Res() res, 
         @Body() createPatientDto: CreatePatientDto, 
         @Param('id') id): Promise<Patient> {

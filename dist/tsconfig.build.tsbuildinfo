@@ -1426,9 +1426,9 @@
         "signature": "aa2a99b2b063d86eb4905d12fa71717853c14f04356ab8a929a696ae836ed4b4",
         "affectsGlobalScope": false
       },
-      "../src/patients/interfaces/patient.model.ts": {
-        "version": "890c3720ae230d9563395aeddea3387cb0e0bd40756ef4a7531df7963c682607",
-        "signature": "e39abaef15d613a38e351fbc9b7864e28c78c19fef1c499fa40cb31050709325",
+      "../src/professionals/interfaces/professional.model.ts": {
+        "version": "5b896e545302f99564912d90b937188bd91690a9a3374f28f9c9a9a32d2bf7c5",
+        "signature": "2f3f8fb0e0d831fa5ce4f9ebb127fac6ac6545ec6559c38667298c42e0d93f0c",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts": {
@@ -1521,28 +1521,53 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
+      "../src/professionals/dto/createprofessional.dto.ts": {
+        "version": "551a766a404f3a3c40d6967466fdf5881e7fc3cc0a704cf10f5ec911bd0b20c5",
+        "signature": "4ae48d40f918b6073f58d4a61f6cada0da70632bb7165ba755ccbadd2f4fe824",
+        "affectsGlobalScope": false
+      },
+      "../src/professionals/professionals.service.ts": {
+        "version": "9158ab94cce75b51d6eac1c85977ed704faca433bd95b96e1b37e12593c78280",
+        "signature": "e2287c93f944fb534539cc6ac5361458318a0ae8dc9af839a4af1ebf04ee1198",
+        "affectsGlobalScope": false
+      },
+      "../src/professionals/professionals.controller.ts": {
+        "version": "3ef32407a4c57104c85d3c1a9694ac351f27551ceda80de37818d529ef78bcc8",
+        "signature": "a7c738cf40097bbd820fc571a76144213aa3d9a9710c9c2bb66ba260d9fc5820",
+        "affectsGlobalScope": false
+      },
+      "../src/professionals/schemas/professional.schema.ts": {
+        "version": "6500b711e439f0aa7a74b374f8d22c42db5c1cc4ec04c442a59648f853ba50a4",
+        "signature": "454997ebe211eb17399955e0da1ff0e24b9b94a32d3c0e98c15bfa9442cd1287",
+        "affectsGlobalScope": false
+      },
+      "../src/professionals/professionals.module.ts": {
+        "version": "2fa89202e1b8360701c0980709b5b7a98111f6086d10aa1f6688240fc46d5c11",
+        "signature": "27aa1430b121902319e8737aa6355a74b9f2582061826d5268ac88837fb79f4d",
+        "affectsGlobalScope": false
+      },
+      "../src/patients/interfaces/patient.model.ts": {
+        "version": "890c3720ae230d9563395aeddea3387cb0e0bd40756ef4a7531df7963c682607",
+        "signature": "e39abaef15d613a38e351fbc9b7864e28c78c19fef1c499fa40cb31050709325",
+        "affectsGlobalScope": false
+      },
       "../src/patients/dto/createpatient.dto.ts": {
         "version": "9eb9ebe3fa6c85d9bd5686bdb2474e277a5d8a8f1d013038da71da9e192ca01d",
         "signature": "bfd8d9b5282f283083f1b7adcfd15f8312cc63396ab45e56160b9dd6e7e9f763",
         "affectsGlobalScope": false
       },
-      "../src/patients/dto/updatepatient.dto.ts": {
-        "version": "6c3802de9c7bc6ac066f13b90e99305f6657e76663c74ebde48e9b8d6e348dbf",
-        "signature": "bda520625ca0905c366dd0043c8529d07b89cb10a0644137eabada41cad3e872",
-        "affectsGlobalScope": false
-      },
       "../src/patients/patients.service.ts": {
-        "version": "b2dc119084f6949491a16b8a4cc46d94b20fc40e57d50de6dfd6aa9bc4cd606e",
+        "version": "44925db8c0a1466a300a35f8f774837f124e47e1a3fd8d4183255023c2c42bde",
         "signature": "aa1f8aa468c2d2150728a65cf805f58c33f4fa34b0fb7a21d261dc05a1043d61",
         "affectsGlobalScope": false
       },
       "../src/patients/patient.controller.ts": {
-        "version": "bbf2a69ee19786c7dc852fe1ff6d3682aa50ed28c4d9be466348858e8898d1cf",
-        "signature": "0e796d27ea5909abe10c9810c044f8bceb55028d6c456afe24800d62c8812a37",
+        "version": "699e78589e564a53c5eb64ca02734e4b50a961fb889e4c7244a2078f8f07a2e8",
+        "signature": "98eda787bfea76e8f003b14c60ea7771e08cda1be4917a479c403ce5776cadf2",
         "affectsGlobalScope": false
       },
       "../src/patients/schemas/patient.schema.ts": {
-        "version": "9317e3328ad7f025c18a1dacc7f7b940cbc3081bf7c3156df4cbd4f48ba7e771",
+        "version": "e3d0a9105260a2c30e974e4836d0513cb6b60101f032e6e212286c39a9925688",
         "signature": "2adeba7ac3eb730591b5f85fff47e237a7800b8608a5ffd768cdc97de7205b8f",
         "affectsGlobalScope": false
       },
@@ -1612,7 +1637,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "84e1a1f9897105f1c6a0154b8303ad4381ebe462be79f7083273597db02565f9",
+        "version": "921ea3a56046c01d018aa35a059127b447c335f67c3fa5bc8cc504a105c13a94",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -1799,6 +1824,11 @@
       "../src/main.ts": {
         "version": "c40ceb8a8f24f1e95ef6ee722a703ddcab328b619d6ce826b1a6f60c218539fd",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../src/patients/dto/updatepatient.dto.ts": {
+        "version": "6c3802de9c7bc6ac066f13b90e99305f6657e76663c74ebde48e9b8d6e348dbf",
+        "signature": "bda520625ca0905c366dd0043c8529d07b89cb10a0644137eabada41cad3e872",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -5642,7 +5672,8 @@
         "../node_modules/@types/node/util.d.ts",
         "../src/app.controller.ts",
         "../src/app.service.ts",
-        "../src/patients/patients.module.ts"
+        "../src/patients/patients.module.ts",
+        "../src/professionals/professionals.module.ts"
       ],
       "../src/app.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -5716,10 +5747,67 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/patients/dto/createpatient.dto.ts",
-        "../src/patients/dto/updatepatient.dto.ts",
         "../src/patients/interfaces/patient.model.ts"
       ],
       "../src/patients/schemas/patient.schema.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/professionals/dto/createprofessional.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/professionals/interfaces/professional.model.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/professionals/professionals.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/professionals/dto/createprofessional.dto.ts",
+        "../src/professionals/interfaces/professional.model.ts",
+        "../src/professionals/professionals.service.ts"
+      ],
+      "../src/professionals/professionals.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/professionals/professionals.controller.ts",
+        "../src/professionals/professionals.service.ts",
+        "../src/professionals/schemas/professional.schema.ts"
+      ],
+      "../src/professionals/professionals.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/professionals/dto/createprofessional.dto.ts",
+        "../src/professionals/interfaces/professional.model.ts"
+      ],
+      "../src/professionals/schemas/professional.schema.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/mongoose/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -9302,6 +9390,22 @@
       ],
       "../src/patients/schemas/patient.schema.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
+      ],
+      "../src/professionals/interfaces/professional.model.ts": [
+        "../node_modules/@types/mongoose/index.d.ts"
+      ],
+      "../src/professionals/professionals.controller.ts": [
+        "../src/professionals/dto/createprofessional.dto.ts",
+        "../src/professionals/interfaces/professional.model.ts",
+        "../src/professionals/professionals.service.ts"
+      ],
+      "../src/professionals/professionals.service.ts": [
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../src/professionals/dto/createprofessional.dto.ts",
+        "../src/professionals/interfaces/professional.model.ts"
+      ],
+      "../src/professionals/schemas/professional.schema.ts": [
+        "../node_modules/@types/mongoose/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -9714,7 +9818,13 @@
       "../src/patients/patient.controller.ts",
       "../src/patients/patients.module.ts",
       "../src/patients/patients.service.ts",
-      "../src/patients/schemas/patient.schema.ts"
+      "../src/patients/schemas/patient.schema.ts",
+      "../src/professionals/dto/createprofessional.dto.ts",
+      "../src/professionals/interfaces/professional.model.ts",
+      "../src/professionals/professionals.controller.ts",
+      "../src/professionals/professionals.module.ts",
+      "../src/professionals/professionals.service.ts",
+      "../src/professionals/schemas/professional.schema.ts"
     ]
   },
   "version": "3.9.7"
