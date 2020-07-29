@@ -1,5 +1,10 @@
+import { ApiProperty } from "@nestjs/swagger";
+
 export class CreatePatientDto {
     // _id: string;
+    @ApiProperty({
+        description: "Tipo de usuario"
+    })
     type: string;
     personalData: {
         NHC: string;

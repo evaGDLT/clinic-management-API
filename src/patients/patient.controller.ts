@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, Res, HttpStatus, Param, NotFoundException,
 import { PatientsService } from './patients.service';
 import { Patient } from './interfaces/patient.model';
 import { CreatePatientDto } from './DTO/createPatient.dto';
+import { ApiResponse, ApiCreatedResponse } from '@nestjs/swagger';
 
 @Controller('patients')
 export class PatientController {
@@ -14,6 +15,12 @@ export class PatientController {
     }
 
     @Post()
+    @ApiResponse({status:201, description:"Patient Created"})
+    @ApiResponse({status: 401, description: "No se ha podido crear el paciente"})
+    @ApiCreatedResponse({
+        description: "Paciente creado",
+        type: "Patient"
+    })
     async createPatient(@Res() res, @Body() createPatientDto: CreatePatientDto): Promise<Patient> {
         const patient = await this.patientsService.createPatient(createPatientDto);
         return res.status(HttpStatus.OK).json({

@@ -16,19 +16,39 @@ exports.UsersService = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
+const bcrypt = require("bcrypt");
 let UsersService = class UsersService {
     constructor(userModel) {
         this.userModel = userModel;
     }
-    async getUsers() {
-        const users = await this.userModel.find();
-        common_1.Logger.log(users);
-        return users;
+    async registerUser(registerUserDto) {
+        const session = await (new this.userModel(registerUserDto)).db.startSession();
+        try {
+            session.startTransaction();
+            let password = await bcrypt.hash(registerUserDto.password, 10);
+            let result = await this.userModel.create([{ "email": registerUserDto.email, "password": password }], { session: session });
+            await session.commitTransaction();
+        }
+        catch (error) {
+            await session.abortTransaction();
+            if (error.code === 11000)
+                throw new common_1.ConflictException("Usuario duplicado");
+            throw new common_1.BadGatewayException();
+        }
+        finally {
+            session.endSession();
+        }
+    }
+    async findByEmail(email) {
+        return this.userModel.findOne({ email: email });
+    }
+    async getAllUsers() {
+        return await this.userModel.find();
     }
 };
 UsersService = __decorate([
     common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel("professionals")),
+    __param(0, mongoose_1.InjectModel("users")),
     __metadata("design:paramtypes", [mongoose_2.Model])
 ], UsersService);
 exports.UsersService = UsersService;

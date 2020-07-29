@@ -14,6 +14,7 @@ const app_service_1 = require("./app.service");
 const patients_module_1 = require("./patients/patients.module");
 const mongoose_1 = require("@nestjs/mongoose");
 const config_1 = require("@nestjs/config");
+const users_module_1 = require("./users/users.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -22,7 +23,8 @@ AppModule = __decorate([
             professionals_module_1.ProfessionalsModule, patients_module_1.PatientsModule, config_1.ConfigModule.forRoot({
                 envFilePath: '.env',
             }), patients_module_1.PatientsModule,
-            mongoose_1.MongooseModule.forRoot(`mongodb+srv://Eva:eva91@cluster0.vm8qj.mongodb.net/users?retryWrites=true&w=majority`)
+            mongoose_1.MongooseModule.forRoot("mongodb+srv://Eva:eva91@cluster0.vm8qj.mongodb.net/users?retryWrites=true&w=majority"),
+            users_module_1.UsersModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

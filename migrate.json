@@ -1,0 +1,4 @@
+{
+    "dbConnectionUri": "mongodb+srv://Eva:eva91@cluster0.vm8qj.mongodb.net/users?retryWrites=true&w=majority",
+    "migrationDir": "./db/migrations"
+}

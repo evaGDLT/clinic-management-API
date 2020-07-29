@@ -1,7 +1,8 @@
 import { UsersService } from './users.service';
-import { User } from './user.model';
+import { RegisterUserDto } from './DTO/register-user.dto';
 export declare class UsersController {
     private usersService;
     constructor(usersService: UsersService);
-    getUsers(res: any): Promise<User[]>;
+    registerUser(registerUserDto: RegisterUserDto): Promise<void>;
+    getUsers(): Promise<import("./interfaces/user.interface").User[]>;
 }

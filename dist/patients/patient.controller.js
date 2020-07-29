@@ -16,6 +16,7 @@ exports.PatientController = void 0;
 const common_1 = require("@nestjs/common");
 const patients_service_1 = require("./patients.service");
 const createPatient_dto_1 = require("./DTO/createPatient.dto");
+const swagger_1 = require("@nestjs/swagger");
 let PatientController = class PatientController {
     constructor(patientsService) {
         this.patientsService = patientsService;
@@ -77,6 +78,12 @@ __decorate([
 ], PatientController.prototype, "getPatients", null);
 __decorate([
     common_1.Post(),
+    swagger_1.ApiResponse({ status: 201, description: "Patient Created" }),
+    swagger_1.ApiResponse({ status: 401, description: "No se ha podido crear el paciente" }),
+    swagger_1.ApiCreatedResponse({
+        description: "Paciente creado",
+        type: "Patient"
+    }),
     __param(0, common_1.Res()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, createPatient_dto_1.CreatePatientDto]),

@@ -15,21 +15,41 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsersController = void 0;
 const common_1 = require("@nestjs/common");
 const users_service_1 = require("./users.service");
+const register_user_dto_1 = require("./DTO/register-user.dto");
 let UsersController = class UsersController {
     constructor(usersService) {
         this.usersService = usersService;
     }
-    async getUsers(res) {
-        const users = await this.usersService.getUsers();
-        return res.status(common_1.HttpStatus.OK).json(users);
+    registerUser(registerUserDto) {
+        try {
+            let data = this.usersService.registerUser(registerUserDto);
+            return data;
+        }
+        catch (Exception) {
+            throw new common_1.HttpException("Exception", common_1.HttpStatus.CONFLICT);
+        }
+    }
+    getUsers() {
+        try {
+            return this.usersService.getAllUsers();
+        }
+        catch (Exception) {
+            throw new common_1.HttpException("Exception", common_1.HttpStatus.CONFLICT);
+        }
     }
 };
 __decorate([
-    common_1.Get(),
-    __param(0, common_1.Res()),
+    common_1.Post(),
+    __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", Promise)
+    __metadata("design:paramtypes", [register_user_dto_1.RegisterUserDto]),
+    __metadata("design:returntype", void 0)
+], UsersController.prototype, "registerUser", null);
+__decorate([
+    common_1.Get(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
 ], UsersController.prototype, "getUsers", null);
 UsersController = __decorate([
     common_1.Controller('users'),

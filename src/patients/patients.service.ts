@@ -9,8 +9,8 @@ export class PatientsService {
     constructor(@InjectModel("patients") private patientModel: Model<Patient>){}
    
     async getPatients(): Promise<Patient[]>{
-        const patients = await this.patientModel.find()
-        return patients;
+        return await this.patientModel.find()
+
     }
 
      async  createPatient(createDto: CreatePatientDto): Promise<Patient> {

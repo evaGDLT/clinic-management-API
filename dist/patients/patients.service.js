@@ -21,8 +21,7 @@ let PatientsService = class PatientsService {
         this.patientModel = patientModel;
     }
     async getPatients() {
-        const patients = await this.patientModel.find();
-        return patients;
+        return await this.patientModel.find();
     }
     async createPatient(createDto) {
         const patient = new this.patientModel(createDto);
