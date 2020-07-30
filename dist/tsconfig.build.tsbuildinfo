@@ -1427,8 +1427,8 @@
         "affectsGlobalScope": false
       },
       "../src/professionals/interfaces/professional.model.ts": {
-        "version": "5b896e545302f99564912d90b937188bd91690a9a3374f28f9c9a9a32d2bf7c5",
-        "signature": "2f3f8fb0e0d831fa5ce4f9ebb127fac6ac6545ec6559c38667298c42e0d93f0c",
+        "version": "8117f21074c57e0fe5ec31735947a2a46e14557dafd73391b1d1395f5bf0585d",
+        "signature": "7c40b5afb23d919a0c45bb98b0dd0a2e1c1f89497d556131b603980d6ba5f7db",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/mongoose/dist/common/mongoose.decorators.d.ts": {
@@ -1519,36 +1519,6 @@
       "../node_modules/@nestjs/mongoose/index.d.ts": {
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
-        "affectsGlobalScope": false
-      },
-      "../src/professionals/dto/createprofessional.dto.ts": {
-        "version": "551a766a404f3a3c40d6967466fdf5881e7fc3cc0a704cf10f5ec911bd0b20c5",
-        "signature": "4ae48d40f918b6073f58d4a61f6cada0da70632bb7165ba755ccbadd2f4fe824",
-        "affectsGlobalScope": false
-      },
-      "../src/professionals/professionals.service.ts": {
-        "version": "9158ab94cce75b51d6eac1c85977ed704faca433bd95b96e1b37e12593c78280",
-        "signature": "e2287c93f944fb534539cc6ac5361458318a0ae8dc9af839a4af1ebf04ee1198",
-        "affectsGlobalScope": false
-      },
-      "../src/professionals/professionals.controller.ts": {
-        "version": "3ef32407a4c57104c85d3c1a9694ac351f27551ceda80de37818d529ef78bcc8",
-        "signature": "a7c738cf40097bbd820fc571a76144213aa3d9a9710c9c2bb66ba260d9fc5820",
-        "affectsGlobalScope": false
-      },
-      "../src/professionals/schemas/professional.schema.ts": {
-        "version": "6500b711e439f0aa7a74b374f8d22c42db5c1cc4ec04c442a59648f853ba50a4",
-        "signature": "454997ebe211eb17399955e0da1ff0e24b9b94a32d3c0e98c15bfa9442cd1287",
-        "affectsGlobalScope": false
-      },
-      "../src/professionals/professionals.module.ts": {
-        "version": "2fa89202e1b8360701c0980709b5b7a98111f6086d10aa1f6688240fc46d5c11",
-        "signature": "27aa1430b121902319e8737aa6355a74b9f2582061826d5268ac88837fb79f4d",
-        "affectsGlobalScope": false
-      },
-      "../src/patients/interfaces/patient.model.ts": {
-        "version": "890c3720ae230d9563395aeddea3387cb0e0bd40756ef4a7531df7963c682607",
-        "signature": "e39abaef15d613a38e351fbc9b7864e28c78c19fef1c499fa40cb31050709325",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/swagger/dist/decorators/api-basic.decorator.d.ts": {
@@ -1736,23 +1706,53 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
+      "../src/professionals/dto/createprofessional.dto.ts": {
+        "version": "3260bf94813c6efb90c04e8ede67e91e38f7ad350f19346cf80cbe39394aba8a",
+        "signature": "22df2999feea54c7442b3a5befc9d3db6852f465d3b5d683ed897c0a55308111",
+        "affectsGlobalScope": false
+      },
+      "../src/professionals/professionals.service.ts": {
+        "version": "4fee459694145070ea2f26b6325860a1eb9ceedb5c34e73ff4e0d2d5cba9d402",
+        "signature": "e2287c93f944fb534539cc6ac5361458318a0ae8dc9af839a4af1ebf04ee1198",
+        "affectsGlobalScope": false
+      },
+      "../src/professionals/professionals.controller.ts": {
+        "version": "5a46eaca9dfd4286b4e9c9efee428de5dd0b1ee8d9cd330b31182a73f328d347",
+        "signature": "a7c738cf40097bbd820fc571a76144213aa3d9a9710c9c2bb66ba260d9fc5820",
+        "affectsGlobalScope": false
+      },
+      "../src/professionals/schemas/professional.schema.ts": {
+        "version": "6500b711e439f0aa7a74b374f8d22c42db5c1cc4ec04c442a59648f853ba50a4",
+        "signature": "454997ebe211eb17399955e0da1ff0e24b9b94a32d3c0e98c15bfa9442cd1287",
+        "affectsGlobalScope": false
+      },
+      "../src/professionals/professionals.module.ts": {
+        "version": "2fa89202e1b8360701c0980709b5b7a98111f6086d10aa1f6688240fc46d5c11",
+        "signature": "27aa1430b121902319e8737aa6355a74b9f2582061826d5268ac88837fb79f4d",
+        "affectsGlobalScope": false
+      },
+      "../src/patients/interfaces/patient.model.ts": {
+        "version": "2495049f74c34b44b1faaa5b6d4129e20ff78d2ae7b6ca2aad16bfa4a31399e4",
+        "signature": "28acd2bcb3c86996591ee475f7bf9e941d47d891c7d014a84bbcf9027b03dd26",
+        "affectsGlobalScope": false
+      },
       "../src/patients/dto/createpatient.dto.ts": {
-        "version": "0ae0a075759e3510da618d32199c90574ede6e459bd722b7d5998ea21ec175ec",
-        "signature": "bfd8d9b5282f283083f1b7adcfd15f8312cc63396ab45e56160b9dd6e7e9f763",
+        "version": "0de658c2db28353acc22a003c4c847d14293abbe363b4f04553ac5f15209b394",
+        "signature": "b4f6b2816b357512d8a8a60cc6bb36986d0efecf94d1c50e5ddfa8b8ce759884",
         "affectsGlobalScope": false
       },
       "../src/patients/patients.service.ts": {
-        "version": "894a3875bfea0131eb10cc4c8e95a6cb08775e701693b1723cdbde9e48f8d186",
+        "version": "10b7510aa48f3383aa956ee462fe46235b3416023a7db872498f17c265d46f2e",
         "signature": "aa1f8aa468c2d2150728a65cf805f58c33f4fa34b0fb7a21d261dc05a1043d61",
         "affectsGlobalScope": false
       },
       "../src/patients/patient.controller.ts": {
-        "version": "c7167c8aa2ffd26d648a1c8382faa69c440aa0b370c26effe1e73ddf2fd3a6fa",
+        "version": "bae9e3ee00434eed01a6067ffa270f38f0ffe40903c73715a158ff10727bd4fe",
         "signature": "98eda787bfea76e8f003b14c60ea7771e08cda1be4917a479c403ce5776cadf2",
         "affectsGlobalScope": false
       },
       "../src/patients/schemas/patient.schema.ts": {
-        "version": "e3d0a9105260a2c30e974e4836d0513cb6b60101f032e6e212286c39a9925688",
+        "version": "afbda49aa202f9391662a77352045bddf8ddfcc6a74b91c660a245710ccce43b",
         "signature": "2adeba7ac3eb730591b5f85fff47e237a7800b8608a5ffd768cdc97de7205b8f",
         "affectsGlobalScope": false
       },
@@ -6234,7 +6234,8 @@
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts"
+        "../node_modules/@types/node/util.d.ts",
+        "../src/patients/interfaces/patient.model.ts"
       ],
       "../src/patients/dto/updatepatient.dto.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -6296,11 +6297,13 @@
         "../node_modules/@types/node/util.d.ts"
       ],
       "../src/professionals/dto/createprofessional.dto.ts": [
+        "../node_modules/@nestjs/swagger/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts"
+        "../node_modules/@types/node/util.d.ts",
+        "../src/professionals/interfaces/professional.model.ts"
       ],
       "../src/professionals/interfaces/professional.model.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -6312,6 +6315,7 @@
       ],
       "../src/professionals/professionals.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/swagger/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",

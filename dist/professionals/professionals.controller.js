@@ -16,6 +16,7 @@ exports.ProfessionalsController = void 0;
 const common_1 = require("@nestjs/common");
 const professionals_service_1 = require("./professionals.service");
 const createProfessional_dto_1 = require("./DTO/createProfessional.dto");
+const swagger_1 = require("@nestjs/swagger");
 let ProfessionalsController = class ProfessionalsController {
     constructor(professionalsService) {
         this.professionalsService = professionalsService;
@@ -77,6 +78,7 @@ __decorate([
 ], ProfessionalsController.prototype, "getProfessionals", null);
 __decorate([
     common_1.Post(),
+    swagger_1.ApiResponse({ status: 201, description: "Professional Created" }),
     __param(0, common_1.Res()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, createProfessional_dto_1.CreateProfessionalDto]),
@@ -84,6 +86,7 @@ __decorate([
 ], ProfessionalsController.prototype, "createProfessional", null);
 __decorate([
     common_1.Get('/:id'),
+    swagger_1.ApiResponse({ status: 401, description: "Patient not found" }),
     __param(0, common_1.Res()), __param(1, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, String]),
@@ -91,6 +94,8 @@ __decorate([
 ], ProfessionalsController.prototype, "getProfessional", null);
 __decorate([
     common_1.Delete('/:id'),
+    swagger_1.ApiResponse({ status: 201, description: "Professional Deleted" }),
+    swagger_1.ApiResponse({ status: 401, description: "Professional not found" }),
     __param(0, common_1.Res()), __param(1, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, String]),
@@ -98,6 +103,8 @@ __decorate([
 ], ProfessionalsController.prototype, "deleteProfessional", null);
 __decorate([
     common_1.Put('/:id'),
+    swagger_1.ApiResponse({ status: 201, description: "Professional Updated  Successfully" }),
+    swagger_1.ApiResponse({ status: 401, description: "Professional not found" }),
     __param(0, common_1.Res()),
     __param(1, common_1.Body()),
     __param(2, common_1.Param('id')),

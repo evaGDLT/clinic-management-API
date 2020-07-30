@@ -1,3 +1,10 @@
+export declare class Address {
+    street: string;
+    number: string;
+    door: string;
+    postalCode: string;
+    city: string;
+}
 export declare class CreateProfessionalDto {
     type: string;
     personalData: {
@@ -11,13 +18,6 @@ export declare class CreateProfessionalDto {
         professionalType?: professional;
     };
     address?: Address;
-}
-export declare class Address {
-    street: string;
-    number: string;
-    door: string;
-    postalCode: string;
-    city: string;
 }
 declare type professional = 'medico' | 'enfermero' | 'administrativo';
 export {};

@@ -1,7 +1,6 @@
 import * as mongoose from 'mongoose';
 
 export const patientSchema =new mongoose.Schema({
-    type: String,
     personalData: {
         NHC: {type: String, required:true},
         firstName: {type: String, required:true},

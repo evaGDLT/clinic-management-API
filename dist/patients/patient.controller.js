@@ -79,11 +79,6 @@ __decorate([
 __decorate([
     common_1.Post(),
     swagger_1.ApiResponse({ status: 201, description: "Patient Created" }),
-    swagger_1.ApiResponse({ status: 401, description: "No se ha podido crear el paciente" }),
-    swagger_1.ApiCreatedResponse({
-        description: "Paciente creado",
-        type: "Patient"
-    }),
     __param(0, common_1.Res()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, createPatient_dto_1.CreatePatientDto]),
@@ -91,6 +86,7 @@ __decorate([
 ], PatientController.prototype, "createPatient", null);
 __decorate([
     common_1.Get('/:id'),
+    swagger_1.ApiResponse({ status: 401, description: "Patient not found" }),
     __param(0, common_1.Res()), __param(1, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, String]),
@@ -98,6 +94,8 @@ __decorate([
 ], PatientController.prototype, "getPatient", null);
 __decorate([
     common_1.Delete('/:id'),
+    swagger_1.ApiResponse({ status: 201, description: "Patient Deleted" }),
+    swagger_1.ApiResponse({ status: 401, description: "Patient not found" }),
     __param(0, common_1.Res()), __param(1, common_1.Param('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, String]),
@@ -105,6 +103,8 @@ __decorate([
 ], PatientController.prototype, "deletePatient", null);
 __decorate([
     common_1.Put('/:id'),
+    swagger_1.ApiResponse({ status: 201, description: "Patient Updated  Successfully" }),
+    swagger_1.ApiResponse({ status: 401, description: "Patient not found" }),
     __param(0, common_1.Res()),
     __param(1, common_1.Body()),
     __param(2, common_1.Param('id')),

@@ -26,4 +26,64 @@ export interface Issurance {
     type: issurance;
 }
 declare type issurance = 'salud' | 'familia' | 'dental';
+export declare const issuranceApi: {
+    type: string;
+    properties: {
+        cardNumber: {
+            type: string;
+        };
+        name: {
+            type: string;
+        };
+        type: {
+            type: string;
+        };
+    };
+};
+export declare const addressApi: {
+    type: string;
+    properties: {
+        street: {
+            type: string;
+        };
+        number: {
+            type: string;
+        };
+        door: {
+            type: string;
+        };
+        postalCode: {
+            type: string;
+        };
+        city: {
+            type: string;
+        };
+    };
+};
+export declare const personalDataApi: {
+    type: string;
+    properties: {
+        NHC: {
+            type: string;
+        };
+        firstName: {
+            type: string;
+        };
+        lastName: {
+            type: string;
+        };
+        secondLastName: {
+            type: string;
+        };
+        gender: {
+            type: string;
+        };
+        birthdate: {
+            type: string;
+        };
+        NIF: {
+            type: string;
+        };
+    };
+};
 export {};

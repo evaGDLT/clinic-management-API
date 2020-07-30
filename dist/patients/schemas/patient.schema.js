@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.patientSchema = void 0;
 const mongoose = require("mongoose");
 exports.patientSchema = new mongoose.Schema({
-    type: String,
     personalData: {
         NHC: { type: String, required: true },
         firstName: { type: String, required: true },

@@ -28,10 +28,6 @@ export class PatientsService {
         const deletedPatient = await this.patientModel.findByIdAndDelete(id);
         return deletedPatient;
     }
-    // async updateUser(id: string, updatePatientDto: UpdatePatientDto): Promise<Patient> {
-    //     const updatedPatient = await this.patientModel.findByIdAndUpdate({ _id: id}, updatePatientDto);
-    //     return updatedPatient;
-    // }
     async updateUser(id: string, createPatientDto: CreatePatientDto): Promise<Patient> {
         const updatedPatient = await this.patientModel.findByIdAndUpdate({ _id: id}, createPatientDto, {new: true});
         return updatedPatient;

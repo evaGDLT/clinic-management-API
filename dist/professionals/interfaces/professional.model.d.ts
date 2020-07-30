@@ -20,5 +20,53 @@ export interface Address {
     postalCode: string;
     city: string;
 }
-declare type professional = 'medico' | 'enfermero' | 'administrativo';
-export {};
+export declare type professional = 'medico' | 'enfermero' | 'administrativo';
+export declare const addressApi: {
+    type: string;
+    properties: {
+        street: {
+            type: string;
+        };
+        number: {
+            type: string;
+        };
+        door: {
+            type: string;
+        };
+        postalCode: {
+            type: string;
+        };
+        city: {
+            type: string;
+        };
+    };
+};
+export declare const personalDataApi: {
+    type: string;
+    properties: {
+        medicalBoardNumber: {
+            type: string;
+        };
+        firstName: {
+            type: string;
+        };
+        lastName: {
+            type: string;
+        };
+        secondLastName: {
+            type: string;
+        };
+        gender: {
+            type: string;
+        };
+        birthdate: {
+            type: string;
+        };
+        NIF: {
+            type: string;
+        };
+        professionalType: {
+            type: string;
+        };
+    };
+};

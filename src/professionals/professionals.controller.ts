@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, Res, HttpStatus, Param, NotFoundException,
 import { ProfessionalsService } from './professionals.service';
 import { Professional } from './interfaces/professional.model';
 import { CreateProfessionalDto } from './DTO/createProfessional.dto';
+import { ApiResponse, ApiCreatedResponse } from '@nestjs/swagger';
 
 @Controller('professionals')
 export class ProfessionalsController {
@@ -13,6 +14,7 @@ export class ProfessionalsController {
         return res.status(HttpStatus.OK).json(professionals);
     }
     @Post()
+    @ApiResponse({status:201, description:"Professional Created"})
     async createProfessional(@Res() res, @Body() createProfessionalDto: CreateProfessionalDto): Promise<Professional> {
         const professional = await this.professionalsService.createProfessional(createProfessionalDto);
         return res.status(HttpStatus.OK).json({
@@ -20,7 +22,9 @@ export class ProfessionalsController {
             professional
         });
     }
+    
     @Get('/:id')
+    @ApiResponse({status: 401, description: "Patient not found"})
     async getProfessional(@Res() res, @Param('id') id: string): Promise<Professional> {
         if (id.match(/^[0-9a-fA-F]{24}$/)) {
             const professional = await this.professionalsService.getProfessional(id);
@@ -31,8 +35,9 @@ export class ProfessionalsController {
             throw new NotFoundException("Professional not found")
         }
     }
-
     @Delete('/:id')
+    @ApiResponse({status:201, description:"Professional Deleted"})
+    @ApiResponse({status: 401, description: "Professional not found"})
     async deleteProfessional(@Res() res, @Param('id') id: string): Promise<Professional> {
         if (id.match(/^[0-9a-fA-F]{24}$/)) {
             const professional = await this.professionalsService.deleteProfessional(id);
@@ -46,6 +51,8 @@ export class ProfessionalsController {
         }
     }
     @Put('/:id')
+    @ApiResponse({status:201, description:"Professional Updated  Successfully"})
+    @ApiResponse({status: 401, description: "Professional not found"})
     async updateProfessional(
         @Res() res, 
         @Body() createDto: CreateProfessionalDto, 

@@ -28,4 +28,37 @@ export interface Issurance {
     type: issurance;
 }
 type issurance = 'salud' | 'familia' | 'dental';
-//type professionalType= 'Medico' | 'Enfermero' | 'Administrativo';
+
+/**
+ * Swagger API 
+ */
+export const issuranceApi = {
+    type: 'object',
+    properties:{
+        cardNumber: {type: 'string'},
+        name: {type: 'string'},
+        type: {type: 'string'}
+    }
+}
+export const addressApi = {
+    type: 'object',
+    properties: {
+        street: {type: 'string'},
+        number: {type: 'string'},
+        door: {type: 'string'},
+        postalCode: {type: 'string'},
+        city: {type: 'string'}
+    }
+}
+export const personalDataApi = {
+    type: 'object',
+    properties: {
+        NHC: {type: 'string'},
+        firstName: {type: 'string'},
+        lastName: {type: 'string'},
+        secondLastName: {type: 'string'},
+        gender: {type: 'string'},
+        birthdate: {type: 'string'},
+        NIF: {type: 'string'}
+    }
+}
