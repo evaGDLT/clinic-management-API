@@ -37,6 +37,10 @@ let UsersController = class UsersController {
             throw new common_1.HttpException("Exception", common_1.HttpStatus.CONFLICT);
         }
     }
+    async getUserByEmail(email) {
+        const user = await this.usersService.findByEmail(email);
+        return user;
+    }
 };
 __decorate([
     common_1.Post(),
@@ -51,6 +55,13 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], UsersController.prototype, "getUsers", null);
+__decorate([
+    common_1.Get('/:email'),
+    __param(0, common_1.Param('email')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], UsersController.prototype, "getUserByEmail", null);
 UsersController = __decorate([
     common_1.Controller('users'),
     __metadata("design:paramtypes", [users_service_1.UsersService])

@@ -1832,13 +1832,18 @@
         "affectsGlobalScope": false
       },
       "../src/users/users.service.ts": {
-        "version": "53d03b47c390241688edc10d3d23d1f51bbfc0fbce9396f568b89a110e09d5ea",
+        "version": "67c727c4215ba15f69938b3e9aae7a44f65d761094bfcc37fb5b63f42321d2b1",
         "signature": "0e5b6b4750e1facd9369ee5aeb19a7b9a78ba9bcfb3af185183ff077740031ec",
         "affectsGlobalScope": false
       },
+      "../src/users/dto/payload.dto.ts": {
+        "version": "54bc2ec5f54596b01719a06b32368078ab47f36e38094affaeb1cfb4752e4a2d",
+        "signature": "cfda4dde40c811a0d315e4c33356e6309da43035fbafe9c3946666e67421af27",
+        "affectsGlobalScope": false
+      },
       "../src/users/users.controller.ts": {
-        "version": "9a164fbedbf6319973fc729c797f046c067dc4c2a0f8b01ed1b86e8155b48a12",
-        "signature": "87a59918c81f7c089b0ec6f3554831019dcf6d5417ad9632fce177b20510f36f",
+        "version": "8222c42eace3c64e8abbf03aa69011074d7da17f5866c3eae6a5884e36409e60",
+        "signature": "a1b61169a3df9e6812d1534f13cbc27d44a5b75f986f25c76a00944999aa66bb",
         "affectsGlobalScope": false
       },
       "../src/users/schemas/user.schema.ts": {
@@ -6357,6 +6362,13 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/users/dto/payload.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/users/dto/register-user.dto.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -6387,7 +6399,10 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
+        "../node_modules/rxjs/index.d.ts",
+        "../src/users/dto/payload.dto.ts",
         "../src/users/dto/register-user.dto.ts",
+        "../src/users/interfaces/user.interface.ts",
         "../src/users/users.service.ts"
       ],
       "../src/users/users.module.ts": [
@@ -10796,6 +10811,7 @@
       "../src/professionals/professionals.module.ts",
       "../src/professionals/professionals.service.ts",
       "../src/professionals/schemas/professional.schema.ts",
+      "../src/users/dto/payload.dto.ts",
       "../src/users/dto/register-user.dto.ts",
       "../src/users/interfaces/user.interface.ts",
       "../src/users/schemas/user.schema.ts",

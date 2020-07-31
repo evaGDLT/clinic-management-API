@@ -40,7 +40,7 @@ let UsersService = class UsersService {
         }
     }
     async findByEmail(email) {
-        return this.userModel.findOne({ email: email });
+        return await this.userModel.findOne({ email: email });
     }
     async getAllUsers() {
         return await this.userModel.find();
